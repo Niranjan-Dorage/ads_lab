@@ -5,17 +5,10 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
-# 🔹 Sample Dataset
-data = {
-    'Age': [18, 19, 20, 21, 22, 23, 24],
-    'Depression': [0, 1, 0, 1, 0, 1, 0],
-    'CGPA': [3.5, 3.2, 3.7, 3.1, 3.9, 2.9, 3.8]
-}
-
-df = pd.DataFrame(data)
+# 🔹 Load CSV Data
+df = pd.read_csv('data.csv')
 
 # 🔹 Features & Target
 X = df[['Age', 'Depression']]
